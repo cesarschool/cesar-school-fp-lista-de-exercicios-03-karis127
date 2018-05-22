@@ -39,6 +39,38 @@
 ##
 def main():
     print("questao 3")
+    loc1 = 0
+    loc2 = 0
+    loc3 = 0
+    loc4 = 0
+
+    def boneco(x):
+        global loc1
+        global loc2
+        global loc3
+        global loc4
+        x = x.split()
+        if x[0] == 'CIMA':
+            loc1 += int(x[1])
+        if x[0] == 'BAIXO':
+            loc2 += int(x[1])
+        if x[0] == 'ESQUERDA':
+            loc3 += int(x[1])
+        if x[0] == 'DIREITA':
+            loc4 += int(x[1])
+
+
+    while True:
+        x = input('Digite o Comando: ').upper()
+        if x == '':
+            break
+        else:
+            boneco(x)
+            continue
+
+    locF = ((loc1 - loc2)**2 + (loc3 - loc4)**2)**(1/2)
+    locF = round(locF)
+    print(locF)
 
 
     
