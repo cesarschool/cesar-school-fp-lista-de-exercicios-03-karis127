@@ -30,7 +30,7 @@
 def main():
     print("questao 1")
     
-senha = input('Digite as senhas que deseja saber se são possiveis(Separadas por virgula): ')
+senha = input('Digite as senhas separadas por virgula: ')
 senha = senha.split(',')
 senhas = []
  
