@@ -35,6 +35,17 @@
 ##
 def main():
     print("questao 4")
+    from operator import itemgetter
+
+    lista = []
+
+    while True:
+        tupla = input('Digite o nome, idade e pontuação dos usuarios: ')
+        if tupla == '':
+            break
+        tupla = tupla.split(',')
+        lista.append((tuple(tupla)))
+    print(sorted(tuple(lista), key=itemgetter(0,1,2)))
 
 
     
