@@ -28,6 +28,19 @@
 ##
 def main():
     print("questao 2")
+    
+    from string import *
+
+    palavras = input('Digite à frase desejada: ')
+    palavras = palavras.split()
+    bolinho = []
+
+    for i in palavras:
+        bolinho.append("{}:{}".format(i,palavras.count(i)))
+    bolinho = list(set(bolinho))
+    bolinho = sorted(bolinho)
+    for i in bolinho:
+        print(i)
 
 
 
