@@ -30,60 +30,60 @@
 def main():
     print("questao 1")
     
-senha = input('Digite as senhas separadas por virgula: ')
-senha = senha.split(',')
-senhas = []
- 
- 
-def alpha(senha):
-    for x in senha:
-        if x.isalpha() == True:
-            return True
- 
- 
-def especial(senha):
-    c1 = '@'
-    c2 = '#'
-    c3 = '$'
-    for x in senha:
-        if x == c1 or x == c2 or x == c3:
-            return True
- 
- 
-def maiusculo(senha):
-    for x in senha:
-        if x.isupper() == True:
-            return True
- 
- 
-def minusculo(senha):
-    for x in senha:
-        if x.islower() == True:
-            return True
- 
- 
-def numero(senha):
-    for x in senha:
-        if x.isnumeric() == True:
-            return True
- 
- 
-def tamanho(senha):
-    lenx = len(senha)
-    if lenx >= 6 and lenx <= 12:
-        return True
- 
- 
-def all(senha):
-    if alpha(senha) and numero(senha) and especial(senha) and maiusculo(senha) and minusculo(senha) and tamanho(senha):
-        return True
+    senha = input('Digite as senhas separadas por virgula: ')
+    senha = senha.split(',')
+    senhas = []
 
-for palavra in senha :
-        if all(palavra) == True:
-            senhas.append(palavra)
-        else:
-            continue
-print(','.join(senhas))  
+
+    def alpha(senha):
+        for x in senha:
+            if x.isalpha() == True:
+                return True
+
+
+    def especial(senha):
+        c1 = '@'
+        c2 = '#'
+        c3 = '$'
+        for x in senha:
+            if x == c1 or x == c2 or x == c3:
+                return True
+
+
+    def maiusculo(senha):
+        for x in senha:
+            if x.isupper() == True:
+                return True
+
+
+    def minusculo(senha):
+        for x in senha:
+            if x.islower() == True:
+                return True
+
+
+    def numero(senha):
+        for x in senha:
+            if x.isnumeric() == True:
+                return True
+
+
+    def tamanho(senha):
+        lenx = len(senha)
+        if lenx >= 6 and lenx <= 12:
+            return True
+
+
+    def all(senha):
+        if alpha(senha) and numero(senha) and especial(senha) and maiusculo(senha) and minusculo(senha) and tamanho(senha):
+            return True
+
+    for palavra in senha :
+            if all(palavra) == True:
+                senhas.append(palavra)
+            else:
+                continue
+    print(','.join(senhas))  
 
 
 if __name__ == '__main__':
